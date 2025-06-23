@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listar Advogados</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><a href="/">Lista de Advogados</a></h1>
+  <div class="container">
+    <h3 class="button"><a href="/advogados/criar">Cadastrar</a></h3>
+    <!-- Tabela para exibir os advogados -->
+    <table class="w3-table-all">
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>OAB</th>
+        <th>Especialidade</th>
+        <th class="centered" colspan="2">Ações</th>
+      </tr>
+      <tr th:each="advogado : ${advogados}">
+        <td th:text="${advogado.id}">*</td>
+        <td th:text="${advogado.nome}">*</td>
+        <td th:text="${advogado.telefone}">*</td>
+        <td th:text="${advogado.endereco}">*</td>
+        <td th:text="${advogado.oab}">*</td>
+        <td th:text="${advogado.especialidade.nome}">*</td>
+        <td>
+          <div class="action-buttons">
+            <a class="button" th:href="@{/advogados/editar/{id}(id=${advogado.id})}">Editar</a>
+            <a class="button danger" th:href="@{/advogados/excluir/{id}(id=${advogado.id})}">Excluir</a>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

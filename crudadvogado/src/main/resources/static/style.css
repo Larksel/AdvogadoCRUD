@@ -1,0 +1,201 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat, arial, verdana;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  background: linear-gradient(-135deg, #c850c0, #4158d0);
+  color: white;
+}
+
+body {
+  background: transparent;
+  height: 100%;
+}
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  background: rgba(38, 52, 122, 0.2);
+}
+
+a {
+  text-decoration: none;
+  user-select: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 32px;
+  gap: 16px;
+}
+
+.button {
+  background-color: #5ec94b;
+  display: flex;
+  font-size: 1rem;
+  width: fit-content;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+  user-select: none;
+}
+
+.button:hover {
+  background-color: #51d53a;
+}
+
+.button a {
+  color: white;
+}
+
+.danger {
+  background-color: rgb(241, 61, 61);
+}
+
+/*form styles*/
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 10%;
+  color: black;
+}
+
+form > span {
+  font-size: 28px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+form > .button {
+  margin-bottom: 0;
+  margin-top: 10px;
+  border-radius: 25px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  width: 100%;
+  user-select: none;
+}
+
+/*inputs*/
+input,
+textarea,
+select {
+  border: none;
+  margin-bottom: 10px;
+  width: 100%;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #999;
+  display: block;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  box-shadow: none;
+  outline-width: 0;
+  transition: all 0.15s ease-in;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: space-evenly;
+}
+
+.w3-table,
+.w3-table-all {
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  border-spacing: 0;
+  max-width: 800px;
+  width: 100%;
+  display: table;
+  color: black;
+}
+.w3-table-all {
+  border: 1px solid #ccc;
+  background-color: #ccc;
+}
+.w3-striped tbody tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+.w3-table-all tr:nth-child(even) {
+  background-color: #fff;
+}
+.w3-table-all tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+.w3-hoverable tbody tr:hover,
+.w3-ul.w3-hoverable li:hover {
+  background-color: #ccc;
+}
+.w3-centered tr th,
+.w3-centered tr td {
+  text-align: center;
+}
+.w3-table td,
+.w3-table th,
+.w3-table-all td,
+.w3-table-all th {
+  padding: 8px 8px;
+  display: table-cell;
+  vertical-align: center;
+}
+.w3-table th:first-child,
+.w3-table td:first-child,
+.w3-table-all th:first-child,
+.w3-table-all td:first-child {
+  padding-left: 16px;
+}
+
+th {
+  text-align: left;
+}
+
+.centered {
+  text-align: center;
+}
